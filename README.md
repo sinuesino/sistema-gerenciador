@@ -19,7 +19,8 @@ Backend: PHP
 Frontend: React
 Banco de Dados: mySql
 
-# Ferramentas auxiliares: Git, GitHub, Jira
+# Ferramentas auxiliares 
+Git, GitHub, Jira
 
 # Justificativa técnica:
 
