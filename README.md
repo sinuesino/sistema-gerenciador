@@ -1,7 +1,7 @@
-#📦 Sistema de Gerenciamento de Estoque
+# Sistema de Gerenciamento de Estoque
 Projeto colaborativo com foco no desenvolvimento de um sistema web para controle de estoque, utilizando PHP no backend e React no frontend. Este projeto visa promover o aprendizado técnico e o trabalho em equipe com metodologias ágeis.
 
-#🎯 Objetivo
+# Objetivo
 Desenvolver um sistema de gerenciamento de estoque com foco no aprimoramento de habilidades técnicas em programação backend e frontend, além de promover o trabalho em equipe por meio de metodologias ágeis como Scrum e Kanban.
 
 #🔧 Metodologia
