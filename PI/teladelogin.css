@@ -1,0 +1,71 @@
+.navbar{
+    background-color: #35aaf3;
+}
+.nav-item{
+    color: red;
+}
+.containerPP{
+    float: left;
+}
+.caixacentral{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sidebarp{
+    width: 10%;
+    height: 100px;
+    padding-top: 1%;
+}
+.bemvindo{
+    text-align: center;
+    background-color: azure;
+    height: 60px;
+    padding: 10px;
+}
+.containermt3{
+    height: 600px;
+    flex: 1;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+.contente{
+    height: 1000px;
+    display: flex;
+}
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6%;
+}
+.tabela{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+.tabelacentro{
+    width: 93%;
+}
+.corpo{
+    height: 600px;
+    padding: 3%;
+    width: 90%;
+    margin: 0 auto;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.caixa-centralizada {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
