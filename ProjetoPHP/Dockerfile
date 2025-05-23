@@ -11,7 +11,7 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 
 WORKDIR /ProjetoPHP/backend
 
-COPY backend/ .
+COPY .  .
 
 RUN composer install
 
