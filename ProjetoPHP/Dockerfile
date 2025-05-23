@@ -1,10 +1,6 @@
-FROM php:8.2-apache
-
-RUN docker-php-ext-install mysqli
-
-COPY backend/ /var/www/html/
-COPY frontend/ /var/www/html/
-
-RUN chown -R www-data:www-data /var/www/html/
-
-EXPOSE 80
+FROM php:8.1  
+WORKDIR /app  
+COPY . .  
+RUN composer install  
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]  
+EXPOSE 8000
