@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y unzip zip git curl libzip-dev libonig-d
 
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
-WORKDIR /ProjetoPHP
+WORKDIR /ProjetoPHP/backend
 
 COPY . .
 
