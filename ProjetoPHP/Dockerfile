@@ -1,4 +1,5 @@
 FROM php:8.1
+
 RUN apt-get update && apt-get install -y \
     unzip \
     zip \
@@ -8,9 +9,9 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
 
-WORKDIR /ProjetoPHP
+WORKDIR /ProjetoPHP/backend
 
-COPY . /ProjetoPHP
+COPY backend/ .
 
 RUN composer install
 
