@@ -10,7 +10,7 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 
 WORKDIR /ProjetoPHP
 
-COPY . .
+COPY . /ProjetoPHP
 
 RUN composer install
 
