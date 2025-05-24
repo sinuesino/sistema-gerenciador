@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Excluir Produto</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    input, button { margin: 0.5rem 0; padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [id, setId] = useState("");
+      const [msg, setMsg] = useState("");
+
+      async function excluirProduto() {
+        if (!id.trim() || isNaN(id)) {
+          setMsg("Informe um ID válido (número).");
+          return;
+        }
+
+        try {
+          const response = await fetch("http://localhost/sistema-gerenciador-main/ProjetoPHP/backend/src/routes/excluir_prod.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ id_prod: id }),
+          });
+
+          const texto = await response.text();
+          setMsg(texto);
+          setId("");
+        } catch (error) {
+          setMsg("Erro ao conectar com o servidor.");
+        }
+      }
+
+      return (
+        <div>
+          <h1>Excluir Produto</h1>
+
+          <label>Informe o ID do produto:</label><br />
+          <input
+            type="text"
+            value={id}
+            onChange={e => setId(e.target.value)}
+            placeholder="ID do produto"
+          />
+          <br />
+          <button onClick={excluirProduto}>Excluir Produto</button>
+
+          {msg && <p><strong>Mensagem:</strong> {msg}</p>}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
