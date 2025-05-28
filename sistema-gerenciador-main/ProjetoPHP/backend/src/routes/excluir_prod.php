@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../controllers/produto_controller.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
