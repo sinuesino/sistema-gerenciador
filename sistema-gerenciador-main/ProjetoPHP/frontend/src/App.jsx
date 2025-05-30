@@ -1,7 +1,11 @@
+import React from "react";
+import CategoriaPage from "./components/CategoriaPage";
+
 function App() {
   return (
-    <div>
-      <h1>Meu Projeto React + Vite funcionando!</h1>
+    <div className="App">
+      <h1>Meu Sistema</h1>
+      <CategoriaPage />
     </div>
   );
 }
