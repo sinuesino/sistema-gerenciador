@@ -1,16 +1,5 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /sistema-gerenciador/projeto/backend/public/
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
-</IfModule>
-
-# Security
-<FilesMatch "\.(env|ini|log|sh|sql)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-Options -Indexes
+RewriteEngine On
+RewriteBase /sistema-gerenciador-main/ProjetoPHP/backend/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

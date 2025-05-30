@@ -1,12 +1,5 @@
-export const excluirProduto = async (id_prod) => {
-  const resposta = await fetch('http://localhost/backend/delete-produto.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({ id_prod }),
-  })
+import axios from "axios";
 
-  const texto = await resposta.text()
-  return texto
-}
+const api = axios.create({
+  baseURL: "http://projeto.localhost",
+});
